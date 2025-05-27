@@ -113,6 +113,6 @@ signOut(auth).catch(error => console.error('Error saat logout:', error));
 // Jika user sudah login dan email terverifikasi, redirect langsung ke halaman monitoring
 onAuthStateChanged(auth, (user) => {
     if (user && user.emailVerified) {
-        window.location.href = 'index.html';
+        window.location.href = 'firebase Monitoring.html';
     }
 });
