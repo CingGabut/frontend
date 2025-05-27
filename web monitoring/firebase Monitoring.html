@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitoring Elektrik Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="dashboard.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-content">
+                <h1>WESEL LAYAN SETEMPAT ELEKTRIK MONITORING</h1>
+                <div class="user-section">
+                    <div id="user-info" class="user-info">
+                        <span id="user-name">Loading...</span>
+                        <span id="user-department">Loading...</span>
+                    </div>
+                    <button id="logout-btn" class="logout-btn">Logout</button>
+                </div>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="status-section">
+                <div class="status-card">
+                    <h3>STATUS SISTEM</h3>
+                    <div class="status-indicator">
+                        <span class="label">STATUS:</span>
+                        <span id="status" class="status-value">Loading...</span>
+                    </div>
+                    <div class="status-indicator">
+                        <span class="label">KUNCI:</span>
+                        <span id="kunci" class="status-value">Loading...</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="volt-container">
+                <div class="volt-card">
+                    <h4>AC VOLT</h4>
+                    <div class="volt-value" id="ac-volt">0</div>
+                    <span class="volt-unit">V</span>
+                </div>
+                <div class="volt-card">
+                    <h4>DC VOLT 1</h4>
+                    <div class="volt-value" id="dc-volt">0</div>
+                    <span class="volt-unit">V</span>
+                </div>
+                <div class="volt-card">
+                    <h4>DC VOLT 2</h4>
+                    <div class="volt-value" id="dc-volt2">0</div>
+                    <span class="volt-unit">V</span>
+                </div>
+            </div>
+
+            <div class="table-section">
+                <div class="table-header">
+                    <h3>Riwayat Monitoring</h3>
+                    <div class="table-controls">
+                        <button id="refresh-btn" class="refresh-btn">Refresh</button>
+                        <select id="filter-select" class="filter-select">
+                            <option value="all">Semua Data</option>
+                            <option value="gangguan">Gangguan Saja</option>
+                            <option value="normal">Normal Saja</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Tanggal dan Jam</th>
+                                <th>Keterangan</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="data-table">
+                            <tr>
+                                <td colspan="3" class="loading">Loading data...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div id="loading-overlay" class="loading-overlay">
+        <div class="loading-spinner"></div>
+        <p>Loading...</p>
+    </div>
+</body>
+</html>

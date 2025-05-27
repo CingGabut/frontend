@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Akun Monitoring Elektrik</title>
+    <link rel="stylesheet" href="login.css">
+    <script type="module" src="register.js"></script>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-card">
+            <div class="login-header">
+                <h2>WESEL LAYAN SETEMPAT</h2>
+                <h3>ELEKTRIK MONITORING</h3>
+                <p>Daftar Akun Baru</p>
+            </div>
+            <div class="logo">
+                <img src="solinep.jpg" alt="Logo">
+            </div>
+            <div id="error-message" class="error-message"></div>
+            <div id="success-message" class="success-message"></div>
+            <form id="register-form">
+                <div class="input-group">
+                    <label for="fullname">Nama Lengkap</label>
+                    <input type="text" id="fullname" name="fullname" required placeholder="Masukkan nama lengkap">
+                </div>
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="contoh@email.com">
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required minlength="6" placeholder="Minimal 6 karakter">
+                    <small>Minimal 6 karakter</small>
+                </div>
+                <div class="input-group">
+                    <label for="confirm-password">Konfirmasi Password</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required placeholder="Ulangi password">
+                </div>
+                <div class="input-group">
+                    <label for="department">Departemen</label>
+                    <select id="department" name="department" required>
+                        <option value="">Pilih Departemen</option>
+                        <option value="teknik">Teknik</option>
+                        <option value="operasional">Operasional</option>
+                        <option value="maintenance">Maintenance</option>
+                        <option value="admin">Administrator</option>
+                    </select>
+                </div>
+                <button type="submit" id="register-button">Daftar</button>
+            </form>
+            <div class="form-links">
+                <p>Sudah punya akun? <a href="login.html">Login di sini</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reset Password Monitoring Elektrik</title>
+    <link rel="stylesheet" href="login.css">
+    <script type="module" src="forgot-pass.js"></script>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-card">
+            <div class="login-header">
+                <h2>WESEL LAYAN SETEMPAT</h2>
+                <h3>ELEKTRIK MONITORING</h3>
+                <p>Reset Password</p>
+            </div>
+            <div class="logo">
+                <img src="solinep.jpg" alt="Logo">
+            </div>
+            <div id="error-message" class="error-message"></div>
+            <div id="success-message" class="success-message"></div>
+            <form id="forgot-password-form">
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="Masukkan email terdaftar">
+                </div>
+                <button type="submit" id="reset-button">Kirim Link Reset</button>
+            </form>
+            <div class="form-links">
+                <p><a href="login.html">← Kembali ke Login</a></p>
+                <p>Belum punya akun? <a href="register.html">Daftar di sini</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,622 @@
+/* Reset dan Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #3498db, #2c3e50);
+    min-height: 100vh;
+    color: #2c3e50;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+/* Header */
+.header {
+    background: white;
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 20px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.header h1 {
+    color: #2c3e50;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    flex: 1;
+    min-width: 300px;
+}
+
+.user-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: 14px;
+}
+
+#user-name {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+#user-department {
+    color: #7f8c8d;
+    font-size: 12px;
+}
+
+.logout-btn {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+    background-color: #c0392b;
+    transform: translateY(-1px);
+}
+
+.logout-btn:active {
+    background-color: #a93226;
+    transform: translateY(1px);
+}
+
+/* Main Content */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Status Section */
+.status-section {
+    display: flex;
+    justify-content: center;
+}
+
+.status-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    min-width: 300px;
+}
+
+.status-card h3 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.status-indicator {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px 0;
+}
+
+.status-indicator:last-child {
+    margin-bottom: 0;
+}
+
+.label {
+    font-weight: bold;
+    color: #2c3e50;
+    font-size: 14px;
+}
+
+.status-value {
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    min-width: 100px;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* Voltage Container */
+.volt-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.volt-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.volt-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: #3498db;
+}
+
+.volt-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.3);
+}
+
+.volt-card.voltage-warning {
+    border: 2px solid #e74c3c;
+    background: #fdf2f2;
+}
+
+.volt-card.voltage-warning::before {
+    background: #e74c3c;
+}
+
+.volt-card h4 {
+    color: #7f8c8d;
+    font-size: 14px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.volt-value {
+    font-size: 36px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.volt-unit {
+    color: #7f8c8d;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Table Section */
+.table-section {
+    background: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.table-header h3 {
+    color: #2c3e50;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.table-controls {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.refresh-btn {
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.refresh-btn:hover {
+    background-color: #219a52;
+    transform: translateY(-1px);
+}
+
+.refresh-btn:active {
+    background-color: #1e8449;
+    transform: translateY(1px);
+}
+
+.filter-select {
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    background: white;
+    cursor: pointer;
+    transition: border 0.3s ease;
+}
+
+.filter-select:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
+/* Table Container */
+.table-container {
+    overflow-x: auto;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+.data-table thead {
+    background: linear-gradient(135deg, #3498db, #2c3e50);
+    color: white;
+}
+
+.data-table th,
+.data-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.data-table th {
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.data-table tbody tr {
+    transition: background-color 0.3s ease;
+}
+
+.data-table tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+.data-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.row-warning {
+    background-color: #fdf2f2 !important;
+}
+
+.row-warning:hover {
+    background-color: #fecaca !important;
+}
+
+/* Status Badge */
+.status-badge {
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.status-normal {
+    background: #f0fdf4;
+    color: #166534;
+    border: 1px solid #bbf7d0;
+}
+
+.status-warning {
+    background: #fdf2f2;
+    color: #991b1b;
+    border: 1px solid #fecaca;
+}
+
+/* Loading States */
+.loading,
+.no-data,
+.error {
+    text-align: center;
+    padding: 40px;
+    color: #7f8c8d;
+    font-style: italic;
+    font-size: 16px;
+}
+
+.error {
+    color: #e74c3c;
+    font-weight: bold;
+    background-color: #fdf2f2;
+    border: 1px solid #fecaca;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+
+/* Loading Overlay - Hidden by default */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(44, 62, 80, 0.8);
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    color: white;
+}
+
+.loading-overlay.show {
+    display: flex; /* Only show when explicitly activated */
+}
+
+.loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(255, 255, 255, 0.3);
+    border-top: 5px solid white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 20px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Login CSS (untuk halaman login) */
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.login-card {
+    background: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.login-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: #3498db;
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-header h2 {
+    color: #2c3e50;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 5px 0;
+    letter-spacing: 1px;
+}
+
+.login-header h3 {
+    color: #2c3e50;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 5px 0 15px 0;
+}
+
+.login-header p {
+    color: #7f8c8d;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 10px 0;
+}
+
+.logo {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.logo img {
+    max-width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #3498db;
+    padding: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    color: #2c3e50;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.input-group input,
+.input-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: white;
+    transition: all 0.3s ease;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
+.input-group input::placeholder {
+    color: #bdc3c7;
+    font-style: italic;
+}
+
+.input-group small {
+    display: block;
+    margin-top: 5px;
+    font-size: 12px;
+    color: #7f8c8d;
+    transition: color 0.3s ease;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #2980b9;
+}
+
+button[type="submit"]:active {
+    background-color: #21618c;
+    transform: translateY(1px);
+}
+
+button[type="submit"]:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .header {
+        padding: 20px;
+    }
+    
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .header h1 {
+        font-size: 20px;
+        min-width: auto;
+    }
+    
+    .volt-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .table-header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .table-controls {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-container {
+        padding: 10px;
+        max-width: 100%;
+    }
+    
+    .login-card {
+        padding: 20px;
+        margin: 10px;
+    }
+    
+    .login-header h2 {
+        font-size: 18px;
+    }
+    
+    .login-header h3 {
+        font-size: 16px;
+    }
+    
+    .logo img {
+        max-width: 120px;
+        height: 120px;
+    }
+    
+    .volt-card {
+        padding: 20px;
+    }
+    
+    .volt-value {
+        font-size: 28px;
+    }
+}                           
